@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="Car.js"></script>
+    <script src="Base.js"></script>
+    <script src="Rotate.js"></script>
+</head>
+
+
+<body>
+    <a-scene background="color: #FAFAFA">
+        <!-- <a-light type="ambient" color="#d3d3d3" intensity="0.5"></a-light> -->
+        <a-camera position="0 18 50"></a-camera>
+
+        <a-circle id="floor" position="-0.4 -0.76 -25" rotation="-90 90 0" radius="100" shadow="receive: true"
+            visible="true" color="#d3d3d3">
+        </a-circle>
+
+        <a-entity light="type:point;angle:90;intensity:15;castShadow:true" position="0 10 0" car="blue" rotate>
+            <a-entity gltf-model="./gltf_car/scene.gltf" position="5 -1 1" scale="8 8 8"></a-entity>
+        </a-entity>
+
+        <a-entity light="type:point;angle:30;intensity:15;castShadow:true" position="55 5 0" car="red" rotate>
+            <a-entity gltf-model="./gltf_car/scene.gltf" position="0 1.1 0" scale="6 6 6"></a-entity>
+        </a-entity>
+
+        <a-entity light="type:point;angle:90;intensity:5;castShadow:false" position="-55 5 0" car="yellow" rotate>
+            <a-entity gltf-model="./gltf_car/scene.gltf" position="0 -1 0" scale="4 4 4"></a-entity>
+        </a-entity>
+
+    </a-scene>
+</body>
+
+</html>
